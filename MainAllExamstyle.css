@@ -1,0 +1,381 @@
+/* =====================================================
+   ROOT VARIABLES – COLOR SYSTEM
+===================================================== */
+:root{
+  --primary:#0b8dff;
+  --success:#09ff6f;
+  --danger:#fa1900;
+  --warning:#ff9f05;
+  --review:#b007f3;
+  --dark:#121926;
+  --light:#f7f7f7;
+  --border:#03cdff;
+}
+
+
+/* =====================================================
+   RESET & BASE
+===================================================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+body{
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:var(--light);
+  color:#222;
+  overflow-x:hidden;   /* mobile horizontal scroll fix */
+}
+
+
+/* =====================================================
+   HEADER – EXAM STYLE (FIXED & SAFE)
+===================================================== */
+.exam-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:12px 16px;
+
+
+  background:linear-gradient(90deg,#003366,#0055aa);
+  color:#fff;
+
+
+  position:sticky;
+  top:0;
+  z-index:100;
+
+
+  /* 🔴 Yellow strip under header */
+  border-bottom:4px solid #ffcc00;
+}
+
+
+/* Logo */
+.logo-wrap img{
+  height:44px;
+  border-radius:6px;
+}
+
+
+/* Title */
+.exam-header h1{
+  flex:1;
+  text-align:center;
+  font-size:18px;
+  font-weight:600;
+
+
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+
+/* Timer box */
+.timer-wrap{
+  background:#ffcc00;
+  color:#003366;
+  font-weight:700;
+  padding:6px 10px;
+  border-radius:6px;
+  min-width:80px;
+  text-align:center;
+}
+
+
+/* =====================================================
+   PAGE LAYOUT
+===================================================== */
+.wrap{
+  display:flex;
+  gap:14px;
+  padding:14px;
+}
+
+
+.left{
+  flex:3;
+}
+
+
+.right{
+  flex:1;
+  max-height:75vh;
+  overflow-y:auto;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+.card{
+  background:#fff;
+  border-radius:10px;
+  padding:14px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+
+/* =====================================================
+   QUESTION
+===================================================== */
+.question-text{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+
+/* =====================================================
+   OPTIONS – DOT SPACE FIX INCLUDED
+===================================================== */
+.options{
+  display:flex;
+  flex-direction:column;
+  gap:1px; /* option ke beech space */
+}
+
+
+.options label{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;                
+  padding:12px;
+  border-radius:8px;
+  cursor:pointer;
+  background:#fff;
+  transition:.2s;
+}
+
+
+.options input{
+  margin-top:3px;
+}
+
+/* =====================================================
+   CONTROL BUTTONS
+===================================================== */
+.controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:14px;
+}
+
+
+.btn{
+  padding:8px 12px;
+  border:none;
+  border-radius:6px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+
+.primary{ background:var(--primary); color:#fff; }
+.warn{ background:var(--warning); color:#fff; }
+.review{ background:var(--review); color:#fff; }
+.success{ background:var(--success); color:#fff; }
+.danger{ background:var(--danger); color:#fff; }
+
+
+/* =====================================================
+   QUESTION PALETTE
+===================================================== */
+.palette-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,40px);
+  gap:8px;
+}
+
+
+.pal-btn{
+  width:40px;
+  height:40px;
+  border-radius:6px;
+  border:none;
+  font-weight:1000;
+  font-size: larger;
+}
+
+
+/* palette states */
+.pv-notVisited{ background:#eee; }
+.pv-notAnswered{ background:#e74c3c; color:#fff; }
+.pv-answered{ background:#2ecc71; color:#fff; }
+.pv-review{ background:#9b59b6; color:#fff; }
+.pv-reviewAnswered{
+  background:#2ecc71;
+  color:#fff;
+  border:3px solid #9b59b6;
+}
+
+
+/* =====================================================
+   RESULT SUMMARY
+===================================================== */
+#resultSummary{
+  margin-top:14px;
+}
+
+
+.result-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+
+.badge.pass{ background:var(--success); color:#fff; padding:6px 10px; border-radius:6px; }
+.badge.fail{ background:var(--danger); color:#fff; padding:6px 10px; border-radius:6px; }
+
+
+/* =====================================================
+   RESULT BOX GRID
+===================================================== */
+.result-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  gap:12px;
+  margin-bottom:18px;
+}
+
+
+.res-card{
+  background:var(--dark);
+  color:#fff;
+  border-radius:14px;
+  padding:12px;
+  text-align:center;
+}
+
+
+.res-card .label{
+  font-size:14px;
+  opacity:.85;
+}
+
+
+.res-card .val{
+  font-size:18px;
+  font-weight:700;
+  margin-top:6px;
+}
+
+
+/* =====================================================
+   PER QUESTION RESULT
+===================================================== */
+.result-row{
+  background:#f0f6ff;
+  border-left:5px solid var(--primary);
+  padding:16px;
+  border-radius:10px;
+  margin-bottom:16px;
+  line-height:1.7;
+  font-size:16px;
+}
+
+
+.result-row b:nth-of-type(2){
+  color:#e67e22;
+  font-size:17px;
+}
+
+
+.result-row b:nth-of-type(3){
+  color:var(--success);
+  font-size:17px;
+}
+
+
+.result-row b:nth-of-type(4){
+  color:var(--primary);
+  font-size:17px;
+}
+
+
+/* =====================================================
+   OVERLAY GRADE
+===================================================== */
+#gradeOverlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.75);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  z-index:9999;
+}
+
+
+/* =====================================================
+   MOBILE FIX – SAFE & CLEAN
+===================================================== */
+@media(max-width:768px){
+
+
+  .wrap{
+    flex-direction:column;
+    padding:10px;
+  }
+
+
+  .right{
+    max-height:none;
+    order:2;
+  }
+
+
+  .exam-header{
+    padding:10px 12px;
+  }
+
+
+  .logo-wrap img{
+    height:34px;
+  }
+
+
+  .exam-header h1{
+    font-size:14px;
+  }
+
+
+  .timer-wrap{
+    font-size:13px;
+    padding:4px 8px;
+  }
+
+
+  .controls .btn{
+    flex:1 1 48%;
+  }
+
+
+  .palette-grid{
+    grid-template-columns:repeat(auto-fill,36px);
+  }
+
+
+  .pal-btn{
+    width:36px;
+    height:36px;
+  }
+
+
+  .result-cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+
+

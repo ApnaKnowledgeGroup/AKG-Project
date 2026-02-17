@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta charset="UTF-8">
+<title>Apna Knowledge Group | Free Haryana CET & Railway Mock Test | GK PDFs</title>
+<!-- ===== BASIC SEO ===== -->
+<meta name="description" content="Apna Knowledge Group provides Free Haryana CET Mock Tests, Railway Practice Tests, GK PDFs and Online Exam Preparation in Hindi. Prepare with real exam level questions.">
+
+<meta name="keywords" content="Haryana CET Mock Test, Railway Mock Test, Haryana GK PDF, Free Online Test, CET Practice Test, Railway GK Questions, Apna Knowledge Group">
+
+<meta name="author" content="Aman Nain">
+
+<meta name="robots" content="index, follow">
+
+<!-- ===== OPEN GRAPH (FACEBOOK / WHATSAPP SHARE) ===== -->
+<meta property="og:title" content="Apna Knowledge Group - Free Mock Tests & PDFs">
+<meta property="og:description" content="Free Haryana CET & Railway Mock Tests with real exam pattern. Download free PDFs and practice online.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://apnaknowledgegroup.netlify.app./">
+<meta property="og:image" content="https://apnaknowledgegroup.netlify.app.//All IMAGE/ApnaKnowledgeGroup.png">
+
+<!-- ===== TWITTER SEO ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Apna Knowledge Group - Free Mock Tests">
+<meta name="twitter:description" content="Prepare Haryana CET & Railway exams with free mock tests and PDFs.">
+<meta name="twitter:image" content="https://apnaknowledgegroup.netlify.app.//All IMAGE/ApnaKnowledgeGroup.png">
+
+<!-- ===== CANONICAL ===== -->
+<link rel="canonical" href="https://apnaknowledgegroup.netlify.app./">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#ffffff;
+  --card:#121a33;
+  --shine:linear-gradient(120deg,transparent,rgba(255,255,255,.85),transparent);
+}
+
+/* ===== RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  user-select: none;  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:#ffffff;
+  text-align:center;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  padding:10px 14px;
+  background:linear-gradient(135deg,#d80e0e,#00d2ff);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
+
+/* LOGO */
+.logo-box{
+  position:relative;
+  overflow:hidden;
+  border-radius:10px;
+}
+.logo-box img{height:50px}
+.logo-box::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--shine);
+  animation:shine 3s infinite;
+}
+
+/* ===== MAIN ===== */
+main{
+  padding:95px 14px 60px;color:#000000
+}
+h1{font-size:2.2rem;
+  font-family:'Trajan Pro'}
+h2{color:#ff0000;
+  font-family:'serif';
+  font-size:2.1rem;
+  margin:8px 0 22px}
+h3{color:#000000;
+  font-size:1.8rem;
+  font-family: 'Bebas Neue';
+  margin:8px 0 22px}
+h4{color:#ffffff;
+  font-size:1.5rem;
+  font-family: 'sans-serif';
+  margin:8px 0 22px}
+
+/* ===== YOUTUBE STYLE BOX ===== */
+.box-btn{
+  width:150px;
+  height:150px;
+  background:var(--card);
+  border-radius:15px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+  transition:.3s;
+  margin:auto;
+}
+
+.box-btn img{width:50px}
+
+.box-btn::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--shine);
+  animation:shine 2.5s infinite;
+}
+
+/* HEADER YOUTUBE BUTTON FIX */
+header .box-btn{
+  width:auto;
+  height:auto;
+  padding:8px 14px;
+  flex-direction:row;
+  gap:8px;
+  margin:0;
+}
+
+/* ===== SUBJECT GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:18px;
+  max-width:1000px;
+  margin:auto;
+}
+/* ===== POPUP ===== */
+.popup{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#fefeff;
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+}
+.popup-box{
+  background:#0f172a;
+  padding:22px;
+  width:95%;
+  max-width:720px;
+  border-radius:24px;
+  max-height:85vh;
+  overflow-y:auto;
+}
+.popup-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:16px;
+  margin-top:18px;
+}
+
+/* ===== FAQ ===== */
+.faq{
+  max-width:900px;
+  margin:60px auto;
+  text-align:left;
+  padding:0 14px;
+}
+.faq details{
+  background:var(--card);
+  padding:14px;
+  margin-bottom:12px;
+  border-radius:12px;
+}
+
+/* ===== FOUNDER ===== */
+.founder{
+  padding:55px 14px;
+}
+.founder-img{
+  width:140px;
+  height:140px;
+  margin:auto;
+  border-radius:50%;
+  overflow:hidden;
+  position:relative;
+
+}
+.founder-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.founder-img::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--shine);
+  animation:shine 3s infinite;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#020617;
+  padding:22px 10px;
+}
+
+/* SOCIAL ICONS */
+.social{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  margin-top:12px;
+}
+.social a{
+  width:42px;
+  height:42px;
+  background:#121a33;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+.social img{width:22px}
+.social a::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--shine);
+  animation:shine 3s infinite;
+}
+
+/* ===== SHINE ===== */
+@keyframes shine{
+  0%{transform:translateX(-120%)}
+  40%{transform:translateX(120%)}
+  100%{transform:translateX(120%)}
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:600px){
+  h1{font-size:1.6rem}
+  .box-btn{width:130px;height:130px}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-box">
+    <img src="/All IMAGE/ApnaKnowledgeGroup.png" alt="Apna Knowledge Group Logo">
+
+  </div>
+
+  <div class="box-btn" onclick="window.open('https://www.youtube.com/@apnaknowledgegroup2026-b2r')">
+    <img src="https://cdn-icons-png.flaticon.com/128/16064/16064615.png">
+    YouTube
+  </div>
+</header>
+
+<main>
+<h1>Free Haryana CET & Railway Mock Tests 2026</h1>
+<h2>🔥 Free 🔥</h2>
+<h3>💻Mock Tests & PDFs📝</h3>
+
+<!--  MAIN PDF BOX BUTTON -->
+<div class="box-btn" onclick="openPDFs()">
+  <img src="https://cdn-icons-png.flaticon.com/128/3997/3997593.png">
+  <h4>View PDFs</h4>
+</div>
+
+<br><br>
+
+<div class="grid">
+
+  <div class="box-btn" onclick="openSubject('Haryana')">
+    <img src="/All IMAGE/haryanalogo.png" alt="Haryana CET Mock Test Section">
+    <h4>Haryana</h4>
+  </div>
+
+  <div class="box-btn" onclick="openSubject('Railway')">
+    <img src="https://cdn-icons-png.flaticon.com/128/713/713309.png"alt="Railway Mock Test Section">
+    <h4>Railway</h4>
+  </div>
+
+</div>
+
+</main>
+
+<!-- ================= POPUP ================= -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <h2 id="popupTitle"></h2>
+
+    <!--  POPUP BOX GRID -->
+    <div class="popup-grid" id="popupBody"></div>
+
+    <br>
+    <div class="box-btn" onclick="closePopup()">Close</div>
+  </div>
+</div>
+
+<section class="faq">
+  <details>
+    <summary>Test kaise start kare?</summary><Br>
+    <p>Subject par click karke test choose kare.</p>
+  </details>
+  <details>
+    <summary> Kya test free hai ?</summary><BR>
+    <p>Haan, sab free hai.</p>
+  </details>
+  <details>
+    <summary>Mobile par chalega ?</summary><br>
+    <p>Haan, mobile par chalega or real exam jaisa feel dega.</p>
+  </details>
+  <details>
+    <summary>Contact kaise kare ?</summary><Br>
+    <p>Email ke through.Footer main Email icon par click karen.👇</p>
+  </details>
+</section>
+
+<section class="founder">
+  <div class="founder-img">
+    <img src="/All IMAGE/ApnaKnowledgeGroup.png">
+  </div><br>
+  <h2>Aman Nain</h2>
+  <h3>Founder</h3>
+ <h3>(Apna Knowledge Group)</h3>
+ 
+</section>
+
+<footer>
+    <h2><p>Follow US</p></h2>
+    <p>Click Icon 👇</p>
+  <div class="social">
+   
+    <a href="https://www.youtube.com/@yourchannel" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+    </a>
+    <a href="https://www.instagram.com/yourprofile" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+    </a>
+    <a href="https://www.facebook.com/yourpage" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+    </a>
+    <a href="mailto:apnaknowledgegroup@gmail.com">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
+    </a>
+  </div><br>© 2026 Apna Knowledge Group<hr>
+  <p style="max-width:800px;margin:auto;color:#ccc;font-size:14px;">
+Apna Knowledge Group provides free Haryana CET mock tests, Railway practice tests, GK PDFs and online exam preparation material in Hindi. Start your preparation today with real exam pattern questions.
+</p>
+</footer>
+
+<script>
+  if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker Registered"))
+    .catch(err => console.log("Service Worker Failed:", err));
+}
+// ==================== DATA ====================
+const data = {
+  pdf: [
+    ["Haryana PDF 1", "Haryna1.pdf", "https://cdn-icons-png.flaticon.com/128/337/337946.png"],
+    ["Railway PDF 1", "Railway1.pdf", "https://cdn-icons-png.flaticon.com/128/337/337946.png"]
+  ],
+  Haryana: [
+    ["Haryana Test 1", "Noticeharyanacet1.html", "downloadweb.png"]
+  ],
+  Railway: [
+    ["Railway Test 1", "Startexamall.html", "https://cdn-icons-png.flaticon.com/128/713/713309.png"]
+  ]
+};
+
+// ==================== POPUP ELEMENTS ====================
+const popup = document.getElementById("popup");
+const popupTitle = document.getElementById("popupTitle");
+const popupBody = document.getElementById("popupBody");
+
+// ==================== OPEN SUBJECT POPUP ====================
+function openSubject(sub){
+    popupTitle.innerText = sub + " Section";
+    popupBody.innerHTML = "";
+
+    data[sub].forEach(item => {
+        const div = document.createElement("div");
+        div.className = "box-btn";
+        div.innerHTML = `<img src="${item[2]}"> ${item[0]}`;
+        div.onclick = () => {
+            window.location.href = item[1] + "?from=" + encodeURIComponent(sub);
+        };
+        popupBody.appendChild(div);
+    });
+
+    popup.style.display = "flex";
+}
+
+// ==================== OPEN PDF POPUP ====================
+function openPDFs(){
+    popupTitle.innerText = "PDF Section";
+    popupBody.innerHTML = "";
+
+    data.pdf.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "box-btn";
+        div.innerHTML = `<img src="${item[2]}"> ${item[0]}`;
+        div.onclick = () => {
+            window.location.href = item[1] + "?from=PDF";
+        };
+        popupBody.appendChild(div);
+    });
+
+    popup.style.display = "flex";
+}
+
+// ==================== CLOSE POPUP ====================
+function closePopup(){
+    popup.style.display = "none";
+}
+
+// ==================== AUTO OPEN POPUP FROM URL ====================
+window.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const popupName = params.get("popup"); // e.g., Haryana, Railway, PDF
+
+    if(popupName){
+        if(popupName.toLowerCase() === "pdf"){
+            openPDFs();
+        } else {
+            openSubject(popupName);
+        }
+    }
+});
+
+</script>
+<script> type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Apna Knowledge Group",
+  "url": "https://apnaknowledgegroup.netlify.app.",
+  "logo": "https://apnaknowledgegroup.netlify.app.//All IMAGE/ApnaKnowledgeGroup.png",
+  "sameAs": [
+    "https://www.youtube.com/@apnaknowledgegroup2026-b2r"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Aman Nain"
+  }
+}
+</script>
+
+</body>
+</html>
