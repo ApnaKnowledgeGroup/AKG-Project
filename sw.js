@@ -2,7 +2,7 @@ const CACHE_NAME = "akg-cache-v1";
 const urlsToCache = [
   "/",
   "/index.html",
-  "/images/allimage/ApnaKnowledgeGroup.png"
+  "/allimage/ApnaKnowledgeGroup.png"
 ];
 
 self.addEventListener("install", event => {
