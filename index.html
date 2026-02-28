@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" href="/favicon.png" sizes="48x48">
 <meta name="theme-color" content="#1e88e5">
 <meta charset="UTF-8">
@@ -362,7 +363,7 @@ Apna Knowledge Group provides free Haryana CET mock tests, Railway practice test
 
 <script>
   if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js")
+  navigator.serviceWorker.register("/sw.js")
     .then(() => console.log("Service Worker Registered"))
     .catch(err => console.log("Service Worker Failed:", err));
 }
@@ -456,24 +457,23 @@ window.addEventListener("DOMContentLoaded", () => {
 }
 
 let deferredPrompt;
+const installBtn = document.getElementById("installBtn");
 
-window.addEventListener('beforeinstallprompt', (e) => {
+window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
   deferredPrompt = e;
-  document.getElementById('installBtn').style.display = 'block';
+  installBtn.style.display = "block";
 });
 
-document.getElementById('installBtn').addEventListener('click', async () => {
+installBtn.addEventListener("click", async () => {
   if (deferredPrompt) {
     deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === 'accepted') {
-      console.log('User installed the app');
-    }
+    await deferredPrompt.userChoice;
     deferredPrompt = null;
-    document.getElementById('installBtn').style.display = 'none';
+    installBtn.style.display = "none";
   }
 });
+
 
 </script>
 
