@@ -1,20 +1,19 @@
 {
-  "name": "Apna Knowledge Group",
-  "short_name": "AKG GK",
+  "name": "AKG GK",
+  "short_name": "AKG",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
-  "orientation": "portrait",
   "icons": [
     {
-      "src": "/allimage/ApnaKnowledgeGroup.png",
+      "src": "/images/allimage/ApnaKnowledgeGroup.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/allimage/ApnaKnowledgeGroup.png",
+      "src": "/images/allimage/ApnaKnowledgeGroup.png",
       "sizes": "512x512",
       "type": "image/png"
     }
