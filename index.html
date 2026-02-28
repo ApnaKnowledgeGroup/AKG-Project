@@ -58,7 +58,7 @@ header{
   top:0;left:0;
   width:100%;
   padding:10px 14px;
-  background:linear-gradient(135deg,#d80e0e,#ff0000);
+  background:linear-gradient(135deg,#d80e0e,#00d2ff);
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -98,7 +98,10 @@ h4{color:#ffffff;
   font-size:1.5rem;
   font-family: 'sans-serif';
   margin:8px 0 22px}
-
+h5{color:#08fce7;
+  font-family: 'Bebas Neue';
+  font-size:1rem;
+  margin:8px 0 22px}
 /* ===== YOUTUBE STYLE BOX ===== */
 .box-btn{
   width:150px;
@@ -225,17 +228,13 @@ footer{
   margin-top:12px;
 }
 .social a{
-  width:42px;
-  height:42px;
-  background:#121a33;
-  border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
   position:relative;
   overflow:hidden;
 }
-.social img{width:22px}
+.social img{width:80px}
 .social a::after{
   content:"";
   position:absolute;
@@ -278,7 +277,7 @@ footer{
 <h1>Free Haryana CET Mock Tests 2026</h1>
 <h2>🔥 Free 🔥</h2>
 <h3>💻Mock Tests & PDFs📝</h3>
-<!-- Haryana Section link --> <a href="https://apnaknowledgegroup.github.io/Haryana-Section/NoticeHaryanaCetExam1.html"> Haryana CET Notice </a>
+
 <!--  MAIN PDF BOX BUTTON -->
 <div class="box-btn" onclick="openPDFs()">
   <img src="https://cdn-icons-png.flaticon.com/128/3997/3997593.png">
@@ -294,6 +293,7 @@ footer{
     <h4>Haryana Tests</h4>
   </div>
 
+ 
 </div>
 
 </main>
@@ -341,23 +341,10 @@ footer{
 </section>
 
 <footer>
-    <h2><p>Follow US</p></h2>
+    <h2><p>Contact US</p></h2>
     <p>Click Icon 👇</p>
   <div class="social">
    
-    <a href="https://www.youtube.com/@yourchannel" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
-    </a>
-    <a href="https://www.instagram.com/" target="_blank">
-</a>
-
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61586514411351" target="_blank">
-</a>
-
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-    </a>
     <a href="mailto:apnaknowledgegroup@gmail.com">
       <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
     </a>
@@ -376,13 +363,12 @@ Apna Knowledge Group provides free Haryana CET mock tests, Railway practice test
 // ==================== DATA ====================
 const data = {
   pdf: [
-    ["Haryana PDF 1", "/PDFHaryanaTest/NoticeCetTest1PDF.html", "https://cdn-icons-png.flaticon.com/128/337/337946.png"],
+    ["<h5>Haryana PDF 1 Notice</h5>", "/PDFHaryanaTest/NoticeCetTest1PDF.html", "https://cdn-icons-png.flaticon.com/128/337/337946.png"],
     
   ],
   Haryana: [
-    ["Haryana Test 1", <a href="Haryana-Section/NoticeHaryanaCetExam1.html">Haryana CET Notice</a>
-, "/allimage/haryanalogo.png"]
-  ]
+    ["<h5>Haryana Test 1 Notice</h5>", "/Haryana Section/NoticeHaryanaCetExam1.html", "/allimage/haryanalogo.png"]
+  ],
   
 };
 
@@ -466,3 +452,5 @@ window.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
+
