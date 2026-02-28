@@ -1,4 +1,5 @@
-const CACHE_NAME = "akg-cache-v1";
+const CACHE_NAME = "akg-cache-v2"; // v1 → v2
+
 const urlsToCache = [
   "/",
   "/index.html",
