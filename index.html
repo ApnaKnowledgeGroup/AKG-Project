@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 <link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="/favicon.png" sizes="48x48">
 <meta name="theme-color" content="#1e88e5">
 <meta charset="UTF-8">
-<title>Apna Knowledge Group | Free Haryana CET & Railway Mock Test | GK PDFs</title>
+<title>Apna Knowledge Group | Free Mock Tests & GK PDFs</title>
 <!-- ===== BASIC SEO ===== -->
 <meta name="description" content="Apna Knowledge Group provides Free Haryana CET Mock Tests, Railway Practice Tests, GK PDFs and Online Exam Preparation in Hindi. Prepare with real exam level questions.">
 
@@ -257,12 +258,16 @@ footer{
 </head>
 
 <body>
+<button id="installBtn" style="display:none;">
+  Install App
+</button>
 
 <header>
   <div class="logo-box">
     <img src="/allimage/ApnaKnowledgeGroup.png" alt="Apna Knowledge Group Logo">
 
   </div>
+
 
   <div class="box-btn" onclick="window.open('https://www.youtube.com/@apnaknowledgegroup2026-b2r')">
     <img src="https://cdn-icons-png.flaticon.com/128/16064/16064615.png">
@@ -369,7 +374,8 @@ const data = {
   ],
   Haryana: [
     ["Notification", "/Haryana Section/NoticeHaryanaCetExam1.html", "/allimage/haryanalogo.png"]
-  ]
+  ],
+  
 };
 
 // ==================== POPUP ELEMENTS ====================
@@ -448,6 +454,27 @@ window.addEventListener("DOMContentLoaded", () => {
     "name": "Aman Nain"
   }
 }
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById('installBtn').style.display = 'block';
+});
+
+document.getElementById('installBtn').addEventListener('click', async () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') {
+      console.log('User installed the app');
+    }
+    deferredPrompt = null;
+    document.getElementById('installBtn').style.display = 'none';
+  }
+});
+
 </script>
 
 </body>

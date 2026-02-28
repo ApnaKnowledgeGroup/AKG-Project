@@ -1,10 +1,12 @@
 {
-  
+  "name": "Apna Knowledge Group",
   "short_name": "AKG GK",
   "start_url": "/index.html",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/allimage/ApnaKnowledgeGroup.png",
@@ -18,4 +20,3 @@
     }
   ]
 }
-
