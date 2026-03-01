@@ -20,17 +20,17 @@
 <meta property="og:title" content="Apna Knowledge Group - Free Mock Tests & PDFs">
 <meta property="og:description" content="Free Haryana CET & Railway Mock Tests with real exam pattern. Download free PDFs and practice online.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://apnaknowledgegroup.netlify.app./">
-<meta property="og:image" content="https://apnaknowledgegroup.netlify.app.//All IMAGE/ApnaKnowledgeGroup.png">
+<meta property="og:url" content="https://apnaknowledge.netlify.app/">
+<meta property="og:image" content="https://apnaknowledge.netlify.app/allimage/ApnaKnowledgeGroup.png">
 
 <!-- ===== TWITTER SEO ===== -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Apna Knowledge Group - Free Mock Tests">
 <meta name="twitter:description" content="Prepare Haryana CET & Railway exams with free mock tests and PDFs.">
-<meta name="twitter:image" content="https://apnaknowledgegroup.netlify.app.//All IMAGE/ApnaKnowledgeGroup.png">
+<meta name="twitter:image" content="https://apnaknowledge.netlify.app/allimage/ApnaKnowledgeGroup.png">
 
 <!-- ===== CANONICAL ===== -->
-<link rel="canonical" href="https://apnaknowledgegroup.netlify.app./">
+<link rel="canonical" href="https://apnaknowledge.netlify.app/">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -500,8 +500,8 @@ window.addEventListener("DOMContentLoaded", () => {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   "name": "Apna Knowledge Group",
-  "url": "https://apnaknowledgegroup.netlify.app.",
-  "logo": "https://apnaknowledgegroup.netlify.app.//allimage/ApnaKnowledgeGroup.png",
+  "url": "https://apnaknowledge.netlify.app",
+  "logo": "https://apnaknowledge.netlify.app//allimage/ApnaKnowledgeGroup.png",
   "sameAs": [
     "https://www.youtube.com/@apnaknowledgegroup2026-b2r"
   ],
@@ -511,45 +511,57 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+let deferredPrompt = null;
 
-  if (window.matchMedia('(display-mode: standalone)').matches) return;
-  if (localStorage.getItem("installClosed")) return;
+document.addEventListener("DOMContentLoaded", () => {
 
-  let deferredPrompt;
   const popup = document.getElementById("installPopup");
   const btn = document.getElementById("installBtn");
   const text = document.getElementById("installText");
   const closeBtn = document.getElementById("closeInstall");
 
-  setTimeout(() => {
-    popup.classList.add("show");
-  }, 2500);
+  // Agar already installed hai to kuch mat dikhao
+  if (window.matchMedia('(display-mode: standalone)').matches) {
+    return;
+  }
 
+  // Agar user ne close kiya tha to 1 din baad dubara dikhao
+  const closedTime = localStorage.getItem("installClosedTime");
+  if (closedTime && Date.now() - closedTime < 86400000) {
+    return;
+  }
+
+  // beforeinstallprompt event capture karo
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     deferredPrompt = e;
+    popup.classList.add("show");
   });
 
+  // Install button click
   btn.addEventListener("click", async () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const result = await deferredPrompt.userChoice;
-      if (result.outcome === "accepted") {
-        popup.style.display = "none";
-      }
-    } else {
-      text.innerText = "📱 Chrome ke 3 dots → Add to Home Screen";
+    if (!deferredPrompt) {
+      text.innerText = "📱 Chrome ke 3 dots → Install App";
+      return;
     }
+
+    deferredPrompt.prompt();
+    const choice = await deferredPrompt.userChoice;
+
+    if (choice.outcome === "accepted") {
+      popup.style.display = "none";
+    }
+
+    deferredPrompt = null;
   });
 
+  // Close button
   closeBtn.addEventListener("click", () => {
     popup.style.display = "none";
-    localStorage.setItem("installClosed", "true");
+    localStorage.setItem("installClosedTime", Date.now());
   });
 
 });
-
 
 </script>
 
